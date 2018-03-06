@@ -5,5 +5,5 @@ COPY *.csproj ./
 RUN dotnet restore
 COPY . .
 RUN dotnet publish -c Release -o /out
-COPY /app/out .
+COPY /out .
 ENTRYPOINT ["dotnet", "HelloWorld.dll"]
