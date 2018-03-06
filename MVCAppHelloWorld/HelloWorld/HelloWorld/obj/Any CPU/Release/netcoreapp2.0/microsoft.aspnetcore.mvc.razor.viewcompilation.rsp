@@ -1,0 +1,5 @@
+D:\MVCAppHelloWorld\HelloWorld\HelloWorld
+--output-path=obj\Any CPU\Release\netcoreapp2.0\
+--application-name=HelloWorld
+--content-root=D:\MVCAppHelloWorld\HelloWorld\HelloWorld
+--file=
