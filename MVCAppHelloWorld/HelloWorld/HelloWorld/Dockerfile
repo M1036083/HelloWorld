@@ -4,11 +4,11 @@ WORKDIR /app
 # copy csproj and restore as distinct layers
 COPY *.csproj ./
 RUN dotnet restore
-COPY . .
-RUN dotnet build -c Release -o /app
-RUN dotnet publish -c Release -o /app
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+# build runtime image
+FROM microsoft/aspnetcore:2.0
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "HelloWorld.dll"]
