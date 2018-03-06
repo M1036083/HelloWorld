@@ -6,4 +6,4 @@ RUN dotnet restore
 COPY . .
 RUN dotnet publish -c Release -o /bin
 COPY . .
-ENTRYPOINT ["dotnet", "./HelloWorld.dll"]
+ENTRYPOINT ["dotnet", "./helloworld.dll"]
