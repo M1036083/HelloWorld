@@ -8,7 +8,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # build runtime image
-#FROM microsoft/aspnetcore:2.0
-#WORKDIR /app
-COPY /app/out .
+FROM microsoft/aspnetcore:2.0
+WORKDIR /app
+COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "HelloWorld.dll"]
