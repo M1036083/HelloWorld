@@ -1,0 +1,5 @@
+With this technique your application is compiled in two stages
+
+1.Stage 1 compiles and publishes the application by using the microsoft/aspnetcore-build image.
+2.Stage 2 copies the published application from Stage 1 into the final image leaving behind all of the source code
+and tooling needed to build.
