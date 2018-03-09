@@ -27,7 +27,7 @@ namespace HelloWorld
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello, Universe!");
+                await context.Response.WriteAsync("Hello, Universe!Welcome to ASP DotNet Core Project");
             });
         }
     }
