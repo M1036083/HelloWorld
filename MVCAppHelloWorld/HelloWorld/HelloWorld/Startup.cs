@@ -27,7 +27,7 @@ namespace HelloWorld
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World and Namastey India!");
+                await context.Response.WriteAsync("Hello World !");
             });
         }
     }
